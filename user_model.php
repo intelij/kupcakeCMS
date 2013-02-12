@@ -1,5 +1,5 @@
 <?php
-class User_Model extends MY_Model
+class User_Model extends Custom_Model
 {
 
   protected $_table_name = 'users';
