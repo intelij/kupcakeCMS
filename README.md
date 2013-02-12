@@ -1,4 +1,4 @@
-cakePHPTuts
+Custom re-usable functions
 ===========
 
-Learning Cake PHP 101
+These are my custom functions, nothing to do with cake php but everything to do with my custom KupcakeCMS (MVC based CMS).
