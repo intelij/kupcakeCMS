@@ -6,7 +6,7 @@ class customDBFunctions extends Model {
     
     //can grab this from the constants file
     function __construct(){
-        $this->db = new mysqli('localhost', 'root', '', 'Ribbit');
+        $this->db = new mysqli(DB_HOST, DB_USER, '', DB_DATABASE);
     }
     
 
