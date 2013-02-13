@@ -381,7 +381,7 @@ window.fbAsyncInit = function() {
 
 
 			  var oauth_url = 'https://www.facebook.com/dialog/oauth/';
-			  oauth_url += '?client_id=401236519908500'; //Your Client ID
+			  oauth_url += '?client_id=################'; //Your Client ID
 			  oauth_url += '&redirect_uri=' + ''; //Send them here if they're not logged in
 			  oauth_url += '&scope=user_about_me,email,user_location,user_photos,publish_actions,user_birthday,user_likes';
 		
