@@ -23,9 +23,12 @@ Setup Of Database and User Automatic
 Setting Up The Database
 
 
-####Things in here are unfinished and a lot of it is undocumented. I've done most of what I can and there will be lots of bugs. This is just a starting point for what I'm hoping will turn into a nice bootstrap for plonking into a new client's website or even your own.
+####Status -> Pending
+
+Things in here are unfinished and a lot of it is undocumented. I've done most of what I can and there will be lots of bugs. This is just a starting point for what I'm hoping will turn into a nice bootstrap for plonking into a new client's website or even your own.
 More files will be uploaded when i get the time.
 
+logout.php (logout but remain within the facebook iframe environment)
 
 ```php
 <?php
@@ -42,7 +45,7 @@ More files will be uploaded when i get the time.
 ```
 
 
-##Sample implementation 2:
+###PDO implementation :
 
 
 ```php
