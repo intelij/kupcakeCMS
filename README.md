@@ -47,19 +47,32 @@ More files will be uploaded when i get the time.
 
 ```php
 <?php
-  require 'php-sdk/facebook.php';
-  $facebook = new Facebook(array(
-		'appId'  => 'YOUR_APP_ID',
-		'secret' => 'YOUR_APP_SECRET'
-	));
+function insert_album_sql( $album )
+{
+    global $CRUD;
+    $dbh = $CRUD['dbh'];
 
-	setcookie('fbs_'.$facebook->getAppId(),'', time()-100, '/', 'intelij.co.uk');
-	$facebook->destroySession();
-	header('Location: index.php');
+    $query = '
+        INSERT INTO album
+            ( title, artist, label, released )
+            VALUES ( ?, ?, ?, ? )
+    ';
+
+    $sth = $dbh->prepare($query);
+    if($sth) $sth->execute( array( @$album['title'], @$album['artist'], @$album['label'], @$album['released'] ) );
+    else error("insert_album_sql: insert prepare returned no statement handle");
+
+    // check for errors
+    $err = $sth->errorInfo();
+    if($err[0] != 0) error( $err[2] );
+
+    $id = $dbh->lastInsertId();
+    return($id);
+}
 
 ```
 
-##Not the best and secure implementation, i would suggest you use prepared statements with PDO.  I personally prefere PDO over MySQLi implementation.
+Not the best and secure implementation, i would suggest you use prepared statements with PDO.  I personally prefere PDO over MySQLi implementation.
 
 ```php
 private function insert($table, $arr)
