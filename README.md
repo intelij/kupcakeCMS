@@ -404,3 +404,34 @@ window.fbAsyncInit = function() {
 }(document));
 
 ```
+
+### Facebook Resize
+
+```javascript
+
+<div id="fb-root"></div>
+<script type="text/javascript"> 
+	window.fbAsyncInit = function() {
+		FB.init({
+		appId : '################',
+		status : true, // check login status
+		cookie : true, // enable cookies to allow the server to access the session
+		xfbml : true // parse XFBML    
+	});
+
+	//this resizes the the i-frame
+	//on an interval of 100ms
+	FB.Canvas.setAutoGrow(100);
+
+	};
+	(function() {
+		var e = document.createElement('script');
+		e.async = true;
+		e.src = document.location.protocol +
+		'//connect.facebook.net/en_US/all.js';
+		document.getElementById('fb-root').appendChild(e);   
+	}());   
+
+</script> 
+	
+```
