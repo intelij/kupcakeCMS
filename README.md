@@ -435,3 +435,27 @@ window.fbAsyncInit = function() {
 </script> 
 	
 ```
+
+
+
+###Basic widget
+
+```php
+<?php
+/*
+Plugin Name: Basic Plugin
+Description: this is basic plugin development
+Plugin URI: www.fnkdesigns.co.uk
+Author: Khululekani Mkhonza
+Author URI: www.fnkdesigns.co.uk
+*/
+function MycustomMessage()
+{
+	echo "hello this is basic plugin development tutorial";
+}
+function Display()
+{
+	register_sidebar_widget('MycustomMessage','MycustomMessage');
+}
+add_action('widgets_init','Display');
+
