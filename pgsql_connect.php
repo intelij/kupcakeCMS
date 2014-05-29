@@ -1,9 +1,5 @@
 <?php
-/*******************************************************************************
-    bwPgSQL.php by Bill Weinman <http://bw.org/contact/>
-    a DB/CRUD wrapper for PDO/PostgreSQL
-    Copyright (c) 1995-2011 The BearHeart Group LLC
-*******************************************************************************/
+
 
 class bwPgSQL {
     const VERSION = "1.1.4";
